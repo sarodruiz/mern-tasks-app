@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/* RESET */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* APP */
+
+body {
+    background-color: #01000f;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+/* CONTAINER */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TASK LIST */
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem 0;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.task_status,
+.task_delete {
+    border: none;
+    padding: 0;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: none;
+    color: white;
+    font-size: 1.6rem;
+
+    &:hover {
+        transform: scale(1.15);
+    }
+}
+
+.task_status {
+    font-size: 1.7rem;
+}
+
+.mutations {
+    display: flex;
+    gap: 0.75rem;
+}
+
+/* FORM */
+
+.form {
+    display: flex;
+    gap: 0.5rem;
+    width: 50%;
+    margin: 1rem auto;
+}
+
+.form_input {
+    flex: 1;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    outline: none;
+}
+
+.form_button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    color: white;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media (max-width: 420px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .task {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+}
